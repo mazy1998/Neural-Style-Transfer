@@ -1,10 +1,12 @@
 from django.http import HttpResponse 
 from django.shortcuts import render, redirect, render_to_response
 from .forms import *
+from grey import greyscale
 
 # Create your views here.
 
 def index(request):
+	Content.objects.all().delete()
 	return render_to_response('index.html')
 
 # Create your views here. 
@@ -24,9 +26,10 @@ def content_image_view(request):
 def success(request):
 	#return HttpResponse('successfuly uploaded')
 	Contents = Content.objects.all()
+	#Content.objects.all().delete()
 	return render(request, 'display_content_images.html', {'content_images' : Contents})
 
-# def display_content_images(request): 
-#     if request.method == 'GET': 
-  
-#          
+def final_image(request):
+	img = greyscale('../media/'+nameoffile)
+	
+	return render_to_response('final_image.html')     

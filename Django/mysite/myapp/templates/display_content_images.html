@@ -13,12 +13,14 @@
 </head> 
 <body> 
 
-	<!-- {% for content in content_images %}  -->
+	{% for content in content_images %} 
 			<div class="col-md-4"> 
 					{{ content.name }} 
 					<img src="{{ content.content_Main_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
 			</div> 
-	<!-- {% endfor %}  -->
+	{% endfor %} 
+
+<a href="{% url 'final_image' %}">Look at the Result</a>
 
 </body> 
 </html> 
