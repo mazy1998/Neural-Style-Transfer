@@ -2,19 +2,22 @@
 <html lang="en"> 
 <head> 
 	<meta charset="UTF-8"> 
-	<title>Hotel_image</title> 
+	<title>Uploading Images</title> 
 </head> 
 <body> 
 	<form method = "post" enctype="multipart/form-data"> 
 		{% csrf_token %} 
-		{{ form.as_p }} 
-		<button type="submit">Upload</button> 
+		{{ form.as_p }}
+		<button type="submit">Upload</button>
 	</form>
-
 	<form method = "post" enctype="multipart/form-data"> 
 		{% csrf_token %} 
-		{{ form.as_p }} 
-		<button type="submit">Upload</button> 
-	</form> 
+		{{ form.as_p }}
+		<button type="submit">Upload</button>
+	</form>
+
+<br></br>
+
+<a href="{% url 'success' %}">Moving on</a>
 </body> 
 </html> 
