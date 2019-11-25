@@ -23,9 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [ 
     path('admin/', admin.site.urls),
     path('', v.index, name = "index"),
-    #path('actionUrl', v.content_image_view, name = 'image_upload'),
     path('image_upload', v.content_image_view, name = 'image_upload'),
-    #path('display_content_images', v.display_content_images, name = 'content_images'),
     path('success', v.success, name = 'success'),
     path('final_image', v.final_image, name = 'final_image')
 ] 
