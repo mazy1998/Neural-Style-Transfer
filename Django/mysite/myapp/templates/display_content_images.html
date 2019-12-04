@@ -5,23 +5,30 @@
 	<title>Content Images</title> 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
 	</script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> 
-	</script> 
+	</script>  -->
 </head> 
-<body> 
-
+<body bgcolor="#333333">
 	{% for content in content_images %} 
 			<div class="col-md-4"> 
 					{{ content.name }} 
-					<img src="{{ content.content_Main_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
-					<img src="{{ content.style_Main_Img.url }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" /> 
+					<img src="{{ content.content_Main_Img.url }}" class="img-responsive" style="width: 49%; height: 524px"; />
 			</div> 
+			<div class="col-md-4"> 
+					<br>
+					<img src="{{ content.style_Main_Img.url }}" class="img-responsive" style="width: 49%; float: left; margin-top: 18px"/> 
+			</div>
+
 	{% endfor %} 
 
-<a href="{% url 'final_image' %}">Look at the Result</a>
+<center>
+<br />&nbsp;<br />
+<br />&nbsp;<br />
+<a href="{% url 'final_image' %}" style="font-size: 20px; color: #FFFFFF">The Result</a>
+</center>
 
 </body> 
 </html> 

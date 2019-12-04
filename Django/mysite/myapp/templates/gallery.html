@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link rel="stylesheet" type= "text/css" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <input id="item1" type="checkbox"/>
+  <label class="item1" for="item1" style="background-image:url(/media/images/content1.jpg);"></label>
+  <input id="item2" type="checkbox"/>
+  <label class="item2" for="item2" style="background-image:url(/media/images/style1.jpg);"></label>
+  <input id="item3" type="checkbox"/>
+  <label class="item3" for="item3" style="background-image:url(/media/images/final1.png);"></label>
+  <input id="item4" type="checkbox"/>
+  <label class="item4" for="item4" style="background-image:url(/media/images/content2.jpg);"></label>
+  <input id="item5" type="checkbox"/>
+  <label class="item5" for="item5" style="background-image:url(/media/images/style2.jpeg);"></label>
+  <input id="item6" type="checkbox"/>
+  <label class="item6" for="item6" style="background-image:url(/media/images/final2.png);"></label>
+  <input id="item7" type="checkbox"/>
+  <label class="item7" for="item7" style="background-image:url(/media/images/content3.jpg);"></label>
+  <input id="item8" type="checkbox"/>
+  <label class="item8" for="item8" style="background-image:url(/media/images/style3.jpg);"></label>
+  <input id="item9" type="checkbox"/>
+  <label class="item9" for="item9" style="background-image:url(/media/images/final3.png);"></label>
+</div>
+
+<br />&nbsp;<br />
+<br />&nbsp;<br />
+<center>
+ <a href="{% url 'image_upload' %}"style="font-size: 20px; color: #FFFFFF" >Back</a>
+ <span class="tab"></span>
+<a href="{% url 'gallery2' %}"style="font-size: 20px; color: #FFFFFF" >Next</a>
+</center>
+
+</body>
+</html>

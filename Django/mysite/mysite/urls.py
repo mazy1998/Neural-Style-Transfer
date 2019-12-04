@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', v.index, name = "index"),
     path('image_upload', v.content_image_view, name = 'image_upload'),
+    path('gallery', v.gallery, name = "gallery"),
+    path('gallery2', v.gallery2, name = "gallery2"),
     path('success', v.success, name = 'success'),
     path('final_image', v.final_image, name = 'final_image')
 ] 

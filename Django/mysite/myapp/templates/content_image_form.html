@@ -3,21 +3,19 @@
 <head> 
 	<meta charset="UTF-8"> 
 	<title>Uploading Images</title> 
-</head> 
-<body> 
-	<form method = "post" enctype="multipart/form-data"> 
+</head>
+<center>
+<H1 style="color: red">Choose your Images</H1> 
+<body bgcolor="#333333"> 
+	<form method = "post" enctype="multipart/form-data" style="color: white"> 
 		{% csrf_token %} 
 		{{ form.as_p }}
 		<button type="submit">Upload</button>
 	</form>
-	<!-- <form method = "post" enctype="multipart/form-data"> 
-		{% csrf_token %} 
-		{{ form.as_p }}
-		<button type="submit">Upload</button>
-	</form> -->
-
 <br></br>
 
-<a href="{% url 'success' %}">Moving on</a>
+<a href="{% url 'success' %}" style="font-size: 20px; color: #FFFFFF">Upload Images</a>
+<a href="{% url 'gallery' %}" style="font-size: 20px; color: #FFFFFF">Gallery</a>
+</center>
 </body> 
 </html> 
